@@ -34,7 +34,12 @@ void draw() {
   background(0);
   image(movs[currMov], 20, 20, 640, 360);
 }
- 
+
+
+
+/*
+ * == MOVIES == 
+ */
 Movie[] loadMovies() {
   // create array
   Movie[] movieList = new Movie[movieCount];
@@ -45,18 +50,29 @@ Movie[] loadMovies() {
   return movieList;
 }
 
-// keyboard controls for testing
-void keyPressed(){
-  if(key == '0'){
-    currMov = 0;
-  } else if(key == '1'){
-    currMov = 1;
-  }
+// function that changes the active movie
+void loadMovie(int index){
+  currMov = index;
   
-  // stop all the movies and loop the one that was selected
+  // stop all the movies
   for(int i=0; i<movs.length; i++){
     movs[i].stop();
   }
+  // loop (and mute) the one that was selected
   movs[currMov].loop();
   movs[currMov].volume(0);
+}
+
+
+
+/* 
+ * == CONTROLS == 
+ */
+// keyboard controls for testing
+void keyPressed(){
+  if(key == '0'){
+    loadMovie(0);
+  } else if(key == '1'){
+    loadMovie(1);
+  } 
 }

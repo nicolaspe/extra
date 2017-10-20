@@ -24,6 +24,7 @@ void setup() {
 void draw() {
   background(0);
   image(imgs[1], 0, 0, 620, 480);
+  image(imgs[0], 700, 500, 500, 220);
 }
 
 PImage[] loadImages() {

@@ -18,6 +18,11 @@
 
 mov files + `img.scale`
 
+Cannot load videos from a parent folder. Ex: `"../media/filename.mp4"`, they can only be loaded from `"/data/filename.mp4"` and the data folder does not have to be written on the code (`new Movie(this, "filename.mp4")`)
+
+[disable movie sound documentation](https://forum.processing.org/one/topic/how-disable-sound-in-movie.html): has to be user AFTER the video is started/looped. Volume range 0-1.
+
+
 #### Syphon
 - [Link](http://syphon.v002.info/)
 

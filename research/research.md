@@ -16,7 +16,7 @@
 #### Processing (with video library)
 - [Link](https://processing.org/)
 
-
+mov files + `img.scale`
 
 #### Syphon
 - [Link](http://syphon.v002.info/)

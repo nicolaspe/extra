@@ -25,6 +25,8 @@ Cannot load videos from a parent folder. Ex: `"../media/filename.mp4"`, they can
 resize does not work well on video frames... use code from the Frames example
 ![artifacts when resize]()
 
+for the `loadVideos` function, I need to make two "modes", meaning two different input possibilities... for when I have to load all the videos when changing mode, or for when I just want to replace one video.
+
 
 
 #### Syphon

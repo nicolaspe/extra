@@ -29,14 +29,12 @@ for the `loadVideos` function, I need to make two "modes", meaning two different
 
 
 
-#### Syphon
-- [Link](http://syphon.v002.info/)
+#### Syphon + MadMapper
+- [Syphon](http://syphon.v002.info/)
+- [MadMapper](http://madmapper.com/)
 
-
-#### MadMapper
-- [Link](http://madmapper.com/)
-
-
+[How to use them together](https://www.youtube.com/watch?v=ItfCvU6jc5E)
+[Another link](https://socram484.wordpress.com/2013/09/12/using-syphon-with-processing-into-madmapper/)
 
 ## Video resources
 - [White noise](https://www.youtube.com/watch?v=DH0BQtwEAsM)

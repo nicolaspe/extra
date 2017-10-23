@@ -27,6 +27,9 @@ resize does not work well on video frames... use code from the Frames example
 
 for the `loadVideos` function, I need to make two "modes", meaning two different input possibilities... for when I have to load all the videos when changing mode, or for when I just want to replace one video.
 
+If the videos are too large, the program crashes!
+
+"Transparent" background? `clear()` works perfectly! [Link](https://forum.processing.org/one/topic/pgraphics-transparency.html)
 
 
 #### Syphon + MadMapper

@@ -8,35 +8,41 @@
  */
 
 import processing.video.*;
+import processing.serial.*;
 import codeanticode.syphon.*;
 
 // canvas for video mapping
-PGraphics canvas;
-SyphonServer server;
+PGraphics[] canvas;
+SyphonServer[] server;
 
 // resolution
-int w = 800;
-int h = 600;
+int w = 1280;
+int h = 800;
 
 // video variables 
-String[] videoList = {"static.mp4", "dramabug.mp4", "debate_supercut.mp4", 
-                      "taylor_supercut.mp4", "LasCondesSymph.mp4"};
+String[] videoList = {"static.mp4", 
+  "FastFoodCommercials.mp4", 
+  "FunnyCandyCommercials.mp4",
+  "GoldenGlobesArrivals.mp4",
+  "SensationalismMontage.mp4",
+  "WorstMomentsPaparazzi.mp4",
+  "YearWorldWentCrazy"};
 Movie[] vids;
 int currMov = 0;
-int[] activeVid = {1, 2};  // active videos according to the zone
+int[] activeVid = {1, 2, 3};  // active videos according to the zone
 
 // zones positions and boundaries [zone index][xpos, ypos, width, height]
 int[][] zones = {{w/2, 0, w/2, h}, 
-  {20, 20, 320, 180}, 
-  {400, 200, 200, 180}}; 
-  
+                 {20, 20, 320, 180}, 
+                 {400, 200, 200, 180}}; 
+
 // boolean for mode control
 boolean extraMode = false;
 
 
 void setup() {
   // create internal and external canvas
-  size(800, 600, P3D);
+  size(200, 200, P3D);
   canvas = createGraphics(w, h, P3D);
 
   // create Syphon server
@@ -70,7 +76,7 @@ void draw() {
   }
   
   canvas.endDraw();
-  image(canvas, 0, 0);      // duplicates the canvas to the screen
+  //image(canvas, 0, 0);      // duplicates the canvas to the screen
   server.sendImage(canvas); // sends through syphon
 }
 

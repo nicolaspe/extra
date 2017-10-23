@@ -38,3 +38,15 @@ for the `loadVideos` function, I need to make two "modes", meaning two different
 
 ## Video resources
 - [White noise](https://www.youtube.com/watch?v=DH0BQtwEAsM)
+- [Candy Commercial](https://youtu.be/kL_HLhT_UfM)
+- [Sensationalism News](https://youtu.be/cXc5fn6b9RI)
+- [2016 Was a Crazy Year](https://youtu.be/WZ70d0TWWdU)
+- [Celebs and Paparazzi](https://youtu.be/-tPuFrcNAqg)
+- [Fast Food Montage](https://youtu.be/lFDnf4bWanQ)
+- [Red Carpet Montage](https://youtu.be/GLvtw6sh1j4)
+
+
+
+
+
+

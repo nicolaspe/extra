@@ -29,11 +29,11 @@ int h = 800;
 //  "SensationalismMontage.mp4", 
 //  "WorstMomentsPaparazzi.mp4", 
 //  "YearWorldWentCrazy"};
-String[] videoList = {"simple/static.mp4", 
-  "simple/dramabug.mp4", 
-  "simple/debate_supercut.mp4", 
-  "simple/taylor_supercut.mp4",
-  "simple/LasCondesSymph.mp4"};
+String[] videoList = {"media/static.mp4", 
+  "media/dramabug.mp4", 
+  "media/debate_supercut.mp4", 
+  "media/taylor_supercut.mp4",
+  "media/LasCondesSymph.mp4"};
 Movie[] vids;
 int[] activeVid = {1, 2, 3};  // active videos corresponding to the canvas
 

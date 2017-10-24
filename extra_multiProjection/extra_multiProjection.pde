@@ -15,25 +15,19 @@ import processing.serial.*;
 int nServers = 4;
 PGraphics[] canvas;
 SyphonServer[] server;
-color[] colors; // for testing purposes
 
 // canvas resolution
 int w = 1280;
 int h = 800;
 
 // video variables 
-//String[] videoList = {"static.mp4", 
-//  "FastFoodCommercials.mp4", 
-//  "FunnyCandyCommercials.mp4", 
-//  "GoldenGlobesArrivals.mp4", 
-//  "SensationalismMontage.mp4", 
-//  "WorstMomentsPaparazzi.mp4", 
-//  "YearWorldWentCrazy"};
-String[] videoList = {"media/static.mp4", 
-  "media/dramabug.mp4", 
-  "media/debate_supercut.mp4", 
-  "media/taylor_supercut.mp4",
-  "media/LasCondesSymph.mp4"};
+String[] videoList = {"static.mp4", 
+  "FastFoodCommercials.mp4", 
+  "FunnyCandyCommercials.mp4", 
+  "GoldenGlobesArrivals.mp4", 
+  "SensationalismMontage.mp4", 
+  "WorstMomentsPaparazzi.mp4", 
+  "YearWorldWentCrazy.mp4"};
 Movie[] vids;
 int[] activeVid = {1, 2, 3};  // active videos corresponding to the canvas
 
@@ -44,12 +38,6 @@ boolean extraMode = false;
 void setup() {
   // internal control screen
   size(400, 400, P3D); //<>//
-  
-  colors = new color[4];
-  colors[0] = color(0, 0, 0);
-  colors[1] = color(0, 255, 0);
-  colors[2] = color(0, 0, 255);
-  colors[3] = color(255, 0, 0);
   
   // create projected canvases
   canvas = new PGraphics[nServers];
@@ -93,7 +81,7 @@ void draw() {
     }
   }
 
-  // display on internal screen
+  //// display on internal screen
   //image(canvas[0], 0, 0, width/2, height/2);
   //image(canvas[1], width/2, 0,  width/2, height/2);
   //image(canvas[2], 0, height/2, width/2, height/2);
@@ -184,8 +172,7 @@ void randomVideo() {
     // get a random video to display
     int randomVid = floor(random(vids.length -1)) +1;
     
-    // check if the video is already active 
-    
+    // check if the video is already active
     if (isActive(randomVid)) { 
       ; // do nothing and loop to get another number
     } else {

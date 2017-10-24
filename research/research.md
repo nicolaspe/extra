@@ -9,6 +9,12 @@
 - [IR Distance Sensor](https://www.adafruit.com/product/1568): detects between 1 - 5m. "The analog voltage out will range from 3V when an object is about 100cm away and 1.4V when the object is 500cm away".
 - [Maxbotix Ultrasonic Rangefinder](https://www.adafruit.com/product/984): detects from 1mm to 5m! Outputs RS-232 serial data.
 
+#### Ultrasonic Range Finder
+- [Datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
+- [Example 1](http://www.instructables.com/id/Simple-Arduino-and-HC-SR04-Example/)
+- [Example 2](http://tinkersphere.com/documents/TS-126UltrasonicArduinoSketch.txt)
+
+Trigger sends the signal and echo reads the result.
 
 
 ## Software

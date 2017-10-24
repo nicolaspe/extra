@@ -7,8 +7,6 @@
  */
 
 import processing.video.*;
-import codeanticode.syphon.*;
-
 
 String[] videoList = {"static.mp4", "dramabug.mp4", "debate_supercut.mp4", 
                       "taylor_supercut.mp4", "LasCondesSymph.mp4"};
@@ -25,8 +23,6 @@ boolean extraMode = false;
 
 void setup() {
   // canvas size
-  //size(1920, 1080); // 1080p
-  //size(1280, 720);  // 720p
   size(800, 600);   // 800x600
 
   // initialize and load videos
@@ -78,24 +74,24 @@ void displayVid(int vid_i, int zone_i) {
   // == will redo later == 
   // calculate if the target image is the same proportion, wider or taller 
   // and resize+crop accordingly
-  //float imgRatio  = (float) img.width/img.height;
-  //float zoneRatio = (float) wid/hei;
+  float imgRatio  = (float) img.width/img.height;
+  float zoneRatio = (float) wid/hei;
   //print("Ratios: " +imgRatio +" - " +zoneRatio +" ");
-  //if(imgRatio == zoneRatio){  // proportional!
-  //  println("proportional!");
-  //  //img.resize(wid, 0);
-  //} else if (imgRatio > zoneRatio) {  // image wider, preserve scaled height!
-  //  println("image wider, preserve scaled height");
-  //  img.resize(0, hei);
-  //  //img = cropX(img, wid);
-  //} else {  // image taller, preserve scaled width!
-  //  println("image taller, preserve scaled width");
-  //  //img.resize(wid, 0);
-  //  //img = cropY(img, hei);
-  //}
+  if(imgRatio == zoneRatio){  // proportional!
+    //println("proportional!");
+    img.resize(wid, 0);
+  } else if (imgRatio > zoneRatio) {  // image wider, preserve scaled height!
+    //println("image wider, preserve scaled height");
+    img.resize(0, hei);
+    //img = cropX(img, wid);
+  } else {  // image taller, preserve scaled width!
+    //println("image taller, preserve scaled width");
+    img.resize(wid, 0);
+    //img = cropY(img, hei);
+  }
 
   // display
-  image(img, xpos, ypos, wid, hei);
+  image(img, xpos, ypos);
 }
 
 // function to set(get) a specific frame from a video file 

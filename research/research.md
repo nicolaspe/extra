@@ -57,7 +57,9 @@ If the videos are too large, the program crashes!
 - [Celebs and Paparazzi](https://youtu.be/-tPuFrcNAqg)
 - [Fast Food Montage](https://youtu.be/lFDnf4bWanQ)
 - [Red Carpet Montage](https://youtu.be/GLvtw6sh1j4)
-
+- [Prime News Montage](https://youtu.be/gk3cIO1SJtU)
+- [CNN Montage](https://youtu.be/qnBavGpuKzI)
+- [ABC News Montage](https://youtu.be/GyDtm7ItL8I)
 
 
 

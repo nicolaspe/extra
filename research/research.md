@@ -16,6 +16,10 @@
 
 Trigger sends the signal and echo reads the result.
 
+Results are not stable... Keep getting 29xx followed by 0, too much noise! It reads flat surfaces without any problem, but bodies...
+
+Timer functions! http://www.makeuseof.com/tag/arduino-delay-function-shouldnt-use/
+
 
 ## Software
 

@@ -20,6 +20,11 @@ SyphonServer[] server;
 int w = 1280;
 int h = 800;
 
+// Serial communication
+Serial myPort;
+String portName = "/dev/cu.usbmodem1421";
+
+
 // video variables 
 String[] videoList = {"static.mp4", 
   "FastFoodCommercials.mp4", 
@@ -50,6 +55,10 @@ void setup() {
   for (int i=0; i<nServers; i++) {
     server[i] = new SyphonServer(this, "ProceSyphon_" +i);
   }
+  
+  // Serial setup
+  //printArray(Serial.list());
+  myPort = new Serial(this, portName, 9600);
   
   // load videos
   vids = new Movie[videoList.length];

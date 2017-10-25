@@ -21,8 +21,8 @@ int w = 1280;
 int h = 800;
 
 // Serial communication
-Serial myPort;
-String portName = "/dev/cu.usbmodem1421";
+//Serial myPort;
+//String portName = "/dev/cu.usbmodem1421";
 
 
 // video variables 
@@ -58,7 +58,7 @@ void setup() {
   
   // Serial setup
   //printArray(Serial.list());
-  myPort = new Serial(this, portName, 9600);
+  //myPort = new Serial(this, portName, 9600);
   
   // load videos
   vids = new Movie[videoList.length];
@@ -80,7 +80,13 @@ void draw() {
     canvas[i].clear();
     canvas[i].endDraw();
   }
-
+  
+  // read Serial information
+  //int serialMsg = 0;
+  //if(myPort.available() > 0){
+  //  serialMsg = myPort.read();
+  //}
+  
   // display videos in the corresponding zones
   if (!extraMode) {        // display static in canvas 0
     displayVid(0, 0);

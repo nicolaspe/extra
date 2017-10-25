@@ -19,7 +19,7 @@ unsigned long sensor_interval = 200;
 unsigned long closing_timer   = 0;
 unsigned long closing_interval= 15 * 1000;
 
-int threshold = 80; // cm
+int threshold = 100; // cm
 boolean newsOpen = true;
 
 void setup() {
@@ -28,7 +28,7 @@ void setup() {
   pinMode(trigPin, OUTPUT);
 
   myServo.attach(3);
-  myServo.write(180);
+  myServo.write(0);
 
   Serial.begin(9600);
 }
@@ -83,14 +83,14 @@ void loop() {
 void openNews() {
   byte msg = 1;
   Serial.write(msg);
-  myServo.write(180);
+  myServo.write(0);
   newsOpen = true;
 }
 
 void closeNews() {
   byte msg = 0;
   Serial.write(msg);
-  myServo.write(0);
+  myServo.write(180);
   newsOpen = false;
 }
 

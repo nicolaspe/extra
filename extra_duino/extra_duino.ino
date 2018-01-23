@@ -55,24 +55,24 @@ void loop() {
     // read the PULSE
     duration = pulseIn(echoPin, HIGH);
     distance = (duration / 2) / 29.1;
-    Serial.print(distance);
-    Serial.print(" - ");
+//    Serial.print(distance);
+//    Serial.print(" - ");
 
     // open-close media according to distance and threshold
     if (distance >= 2000 || distance <= 7) {  // ERROR!
-      Serial.println("ERROR");
+//      Serial.println("ERROR");
     } else if (distance <= threshold) {
-      Serial.println("CLOSE");
+//      Serial.println("CLOSE");
       closeNews();
       closing_timer = current_time;
     } else {
-      Serial.println();
+//      Serial.println();
     }
   }
 
   // check if enough time has passed to open the news again
   if(current_time - closing_timer > closing_interval && !newsOpen){
-    Serial.println("OPEN");
+//    Serial.println("OPEN");
     openNews();
   }
   
